@@ -11,8 +11,8 @@
 
 namespace EasyDingTalk;
 
-use Overtrue\Http\Support\Collection;
 use Pimple\Container;
+use Overtrue\Http\Support\Collection;
 
 /**
  * @property \EasyDingTalk\Auth\SsoClient $sso
@@ -25,6 +25,7 @@ use Pimple\Container;
  * @property \EasyDingTalk\Report\Client $report
  * @property \EasyDingTalk\Checkin\Client $checkin
  * @property \EasyDingTalk\Contact\Client $contact
+ * @property \EasyDingTalk\Messages\Client $messages
  * @property \EasyDingTalk\Process\Client $process
  * @property \EasyDingTalk\Calendar\Client $calendar
  * @property \EasyDingTalk\Callback\Client $callback
@@ -60,6 +61,7 @@ class Application extends Container
         Process\ServiceProvider::class,
         Calendar\ServiceProvider::class,
         Callback\ServiceProvider::class,
+        Messages\ServiceProvider::class,
         Microapp\ServiceProvider::class,
         Schedule\ServiceProvider::class,
         Blackboard\ServiceProvider::class,

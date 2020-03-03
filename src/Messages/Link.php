@@ -32,8 +32,13 @@ class Link extends Message
 
     protected function transform($value)
     {
-        list($url) = $value;
+        list($text, $url, $pictureUrl, $title) = $value;
 
-        return ['messageUrl' => $url];
+        return [
+            'messageUrl' => $url,
+            'picUrl'     => $pictureUrl,
+            'title'      => $title,
+            'text'       => $text,
+        ];
     }
 }

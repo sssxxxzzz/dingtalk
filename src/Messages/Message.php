@@ -11,7 +11,7 @@
 
 namespace EasyDingTalk\Messages;
 
-class Message
+abstract class Message
 {
     protected $value;
     protected $type;
